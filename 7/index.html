@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<link rel="stylesheet" href="style.css" >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Страница заказа</title>
+</head>
+<body>
+<div class="container">
+    Продукты:
+    <select id="products">
+      <optgroup label="Овощи">
+    <option  value="6.30">Картошка</option>
+    <option value="13.50">Морковка</option>
+    <option value="10">Лук</option>
+  </optgroup>
+  <optgroup label="Фрукты">
+    <option value="17.25">Яблоки</option>
+    <option value="12">Бананы</option>
+    <option value="16.15">Апельсины</option>
+  </optgroup>
+  <optgroup label="Напитки">
+    <option value="9">Чай</option>
+    <option value="10">Кофе</option>
+    <option value="7.50">Молоко</option>
+  </optgroup>
+</select>
+    <label for=""> Количество: </label>
+    <input id="kolvo"  type="text" value="1" style="width: 50px;">
+    <button onclick="addToCard()">Добавить в корзину</button>
+    <br>
+    Скидка:
+    <button id ="Bonus" onclick="addBonus()" disabled>Добавить в скиду</button>
+
+    <label for=""> Курс перевода в УЕ: </label>
+    <input id="kurs"  type="number" value="1" style="width: 50px;">
+
+    
+
+    <hr style="margin-top: 25px; margin-bottom: 50px;">
+
+    
+
+
+
+    <table id="orderTable" style="width:100%;">
+        <caption>Ваш заказ</caption>
+        <thead class="highlighted">
+
+        <tr>
+
+            <td style="width: 25px"><input onclick="toggleAll(this)" type="checkbox"></td>
+
+            <td>Продукт</td>
+            <td style="width: 100px">Цена</td>
+            <td style="width: 100px">Количество</td>
+            <td style="width: 200px">Сумма</td>
+            <td style="width: 200px">Сумма в УЕ</td>
+            <td style="width: 145px"></td>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot class="highlighted">
+        <tr>
+            <td colspan="3">Итого</td>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td>
+                <button onclick="removeSelected()">Удалить отмеченные</button>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+ <script src="main.js">
+</script>
+</body>
+</html>
